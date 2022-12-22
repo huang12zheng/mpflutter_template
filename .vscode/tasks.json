@@ -14,6 +14,20 @@
                 "clear": true
             },
             "problemMatcher": []
+        },
+        {
+            "label": "Build WeApp",
+            "type": "shell",
+            "command": "dart scripts/build_weapp.dart",
+            "presentation": {
+                "echo": false,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "problemMatcher": []
         }
     ]
 }
