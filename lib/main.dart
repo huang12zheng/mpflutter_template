@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:mpcore/mpcore.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+// import 'bak/main.dart';
 import 'detail.dart';
 import 'search.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
+  MPCore().connectToHostChannel();
 }
 
 class MyApp extends ConsumerWidget {
@@ -17,6 +19,7 @@ class MyApp extends ConsumerWidget {
       routes: {
         '/': (context) => SearchPage(),
         '/detail': (context) => PackageDetailPage()
+        // '/': (context) => MyHomePage()
       },
       navigatorObservers: [MPCore.getNavigationObserver()],
     );
